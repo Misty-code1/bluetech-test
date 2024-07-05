@@ -12,17 +12,21 @@ const Homepage = () => {
   }, [data]);
 
   const cleanData = products.map((item) => {
-    const imageUrl = item["Image Small"] || item["Image_1"];
+    const imageUrl = item["Image Small"] || item["Image Links"] || item["Image_1"];
+
+    const size = item["size"] || item["weight"];
 
     return {
       price: item["Cost Price"],
-      imageUrl: item["Image Small"],
+      imageUrl: imageUrl,
       SKU: item.SKU,
       Brand: item.Brand,
       Title: item.Title,
       Description: item.Description,
       Quantity: item.Quantity,
-      size: item.size,
+      size: size,
+      name: item.Designer || item.Name
+      // size: item.size,
     };
   });
 
@@ -59,7 +63,7 @@ const Homepage = () => {
               <div className="data-sn">
                 <label id="label">
                   <input type="checkbox" />
-                  <span className="checkmark">{index + 1}</span>
+                  <span className="checkmark">{index + 1}.</span>
                 </label>
               </div>
               <img
@@ -68,7 +72,7 @@ const Homepage = () => {
                 alt="image"
               />
               <p>{product.SKU}</p>
-              <p>{product.Brand}</p>
+              <p>{product.name}</p>
               <p>{product.Title.slice(0, 30)}</p>
               <p>{product.Description.slice(0, 50)}</p>
               <p>{product.Brand}</p>

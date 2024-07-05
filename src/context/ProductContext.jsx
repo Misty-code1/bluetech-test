@@ -8,7 +8,8 @@ const ProductContextProvider = (props) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [itemSearch, setItemSearch] = useState("");
-  const [supplier, setSupplier] = useState("FragranceNet");
+  // const [supplier, setSupplier] = useState("Morris Costumes");
+  const [supplier, setSupplier] = useState("FragranceX");
 
   useEffect(() => {
     const fetchData = async () => {
