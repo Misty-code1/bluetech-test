@@ -1,12 +1,21 @@
 # Bluetech Solutions test Project
 
-This Project is a React application that fetches data from an API using ContextAPI and renders it on the homepage.
+This Project is a React application create with Vite, the goal is to fetch data from a given API using ContextAPI and render returned data on the homepage.
 
-## Component
+## Components
+
+- Navbar
+
+
+## Context
 
 - ProductContextProvider
-- Navbar
-- Hompage
+
+
+## Pages
+
+- Homepage
+
 
 ## Installation
 
@@ -14,4 +23,4 @@ This Project is a React application that fetches data from an API using ContextA
 
 2. Install dependencies using **npm install**
 
-3. Run project using **npm run dev**
+3. Start project using **npm run dev**
